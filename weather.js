@@ -8,7 +8,7 @@ if("geolocation" in navigator){
 function success(position){
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
-    const functionUrl = `/api/getWeather?latitude=${lat}&longitude=${lon}`; // Netlify function URL
+    const functionUrl = `https://easeandaccess.netlify.app/.netlify/functions/getweather?latitude=${lat}&longitude=${lon}`; // Netlify function URL
     
     fetch(functionUrl)
       .then(response => {

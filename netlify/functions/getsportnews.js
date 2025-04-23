@@ -20,16 +20,16 @@ exports.handler = async (event, context) => {
     }
     const data = await response.json();
 
-    if (data && Array.isArray(data.results)) {
+    if (Array.isArray(data)) {
       return {
         statusCode: 200,
-        body: JSON.stringify(data.results),
+        body: JSON.stringify(data),
       };
     } else {
-      console.error("Error: NewsData.io response did not contain a valid 'results' array:", data);
+      console.error("Error: NewsData.io response is not an array:", data);
       return {
         statusCode: 500,
-        body: JSON.stringify({ error: 'Failed to load sports news: Invalid response format' }),
+        body: JSON.stringify({ error: 'Failed to load sports news: Unexpected response format - not an array' }),
       };
     }
   } catch (error) {

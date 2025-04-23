@@ -22,8 +22,8 @@ function fetchSportNews(){
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            if (data && Array.isArray(data.results)) {
-                const articles = data.results;
+            if (Array.isArray(data)) { // Check if data is directly an array
+                const articles = data; // 'data' is the array of articles
                 let output = "<h1 style='color: white;'>Latest Sport News</h1>";
                 articles.forEach(article => {
                     let desc;

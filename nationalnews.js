@@ -14,7 +14,7 @@ const malaysiaNewsWebsites = {
     chinese: [
       { title: "China Press", url: "https://www.chinapress.com.my/", imageUrl: "images/chinapress.svg" },
       { title: "Oriental Daily", url: "https://www.orientaldaily.com.my/", imageUrl: "images/orientaldaily.png" },
-      { title: "Nanyang Siang Pau", url: "https://www.enanyang.my/", imageUrl: "images/enanyang.jpeg" },
+      { title: "Nanyang Siang Pau", url: "https://www.enanyang.my/", imageUrl: "images/enanyang.png" },
       { title: "Guang Ming Daily", url: "https://www.guangming.com.my/", imageUrl: "images/guangming.png" },
       { title: "Kwong Wah Yit Poh", url: "https://www.kwongwah.com.my/", imageUrl: "images/kwonghua.png" },
       { title: "See Hua Daily News", url: "https://news.seehua.com/", imageUrl: "images/seehua.png" },

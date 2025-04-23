@@ -52,7 +52,24 @@ function myNavigateButton() {
 }
 
 function getWeatherEmoji(weatherId) {
-  // ... (your existing getWeatherEmoji function) ...
+  switch(true){
+        case(weatherId >= 200 && weatherId<300):
+            return "⛈️";
+        case(weatherId >= 300 && weatherId<400):
+            return "🌧️";
+        case(weatherId >= 500 && weatherId<600):
+            return "🌧️";    
+        case(weatherId >= 500 && weatherId<600):
+            return "🌨️";    
+        case(weatherId >= 600 && weatherId<700):
+            return "🌫️"; 
+        case(weatherId === 800):
+            return "☀️"; 
+        case(weatherId >= 801 && weatherId<805):
+            return "☁️";
+        default:
+            return "❓";
+    }
 }
 
 document.getElementById('results').textContent = "Enter a city";

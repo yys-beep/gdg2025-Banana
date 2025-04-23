@@ -1,0 +1,1054 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+header{
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+    background-color: rgba(132, 132, 253, 0.685);
+    /*background: linear-gradient(to bottom, rgb(71, 105, 255),rgba(238, 255, 0, 0.523));*/
+    padding: 0.5em;
+    text-shadow: 0px 0px 10px rgb(239, 239, 248);
+    font-family: "Merriweather";
+    font-weight: bold;
+    width: 100%;
+    display: inline-block;
+}
+footer{
+    padding: 10px;
+}
+.mainpage-background{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, #000000 100%), 
+                url("mainpagebackground.png"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-shadow:0px 0px 10px rgb(0, 0, 0);
+}
+#website-title{
+    font-size: 4em;
+    letter-spacing: 0.1em;
+    margin: 0.5em;
+    margin-bottom: -10px;
+    text-shadow: 0px 0px 5px yellow;
+}
+#website-subtitle{
+    font-family: "Anonymous Pro";
+    font-weight: lighter;
+    letter-spacing: 5px;
+    font-size: 1.8em;
+    margin: 20px;
+    text-shadow: 0px 0px 5px rgb(21, 255, 0);
+}
+#website-desc{
+    font-size: 1em;
+    margin: 1.5em;
+    margin-top: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#prompt-text{
+    font-family: "Anonymous Pro"; 
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+.card-container{
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2em;
+}
+.nationalnews-card{
+    width: 100%;
+    height: 200px;
+    margin: 10px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, white 100%),
+                url("nationalnews.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+    border-radius: 10px;
+}
+.nationalnews-card:hover{
+    background: linear-gradient(to bottom, rgba(223, 61, 61, 0) 30%, rgba(47, 40, 40, 0.913) 100%),
+                url("nationalnews.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.small-card-container{
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    overflow-y: hidden;
+    margin-top: 10px;
+}
+.healthcare-card,
+.goverment-card,
+.event-card,
+.sport-card,
+.weather-card,
+.transport-card{
+    flex:1;
+    font-size: 0.5em;
+    width: 95%;
+    height: 30vh;
+    margin: 0px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-spacing: normal;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid rgba(255, 255, 255, 0.505);
+    box-shadow: 5px 5px 5px white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.healthcare-card{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(179, 255, 0, 0.612) 100%),
+                url("healthcare.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.healthcare-card:hover{
+    background: linear-gradient(to bottom, rgba(223, 61, 61, 0) 30%, rgba(47, 40, 40, 0.913) 100%),
+                url("healthcare.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.goverment-card{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(255, 225, 56, 0.491) 100%),
+                url("jalur-gemilang.webp");
+    background-position: center;
+    background-size: cover;
+}
+.goverment-card:hover{
+    background: linear-gradient(to bottom, rgba(223, 61, 61, 0) 30%, rgba(47, 40, 40, 0.913) 100%),
+                url("jalur-gemilang.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.event-card{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(255, 7, 193, 0.393) 100%),
+                url("event-background.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.event-card:hover{
+    background: linear-gradient(to bottom, rgba(223, 61, 61, 0) 30%, rgba(47, 40, 40, 0.913) 100%),
+                url("event-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sport-card{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(43, 0, 255, 0.349) 100%),
+                url("sport.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.sport-card:hover{
+    background: linear-gradient(to bottom, rgba(223, 61, 61, 0) 30%, rgba(47, 40, 40, 0.913) 100%),
+                url("sport.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.weather-card{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(230, 7, 255, 0.324) 100%),
+                url("weatherforecast2.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.weather-card:hover{
+    background: linear-gradient(to bottom, rgba(223, 61, 61, 0) 30%, rgba(47, 40, 40, 0.913) 100%),
+                url("weatherforecast2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.transport-card{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(255, 164, 7, 0.324) 100%),
+                url("transportation.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.transport-card:hover{
+    background: linear-gradient(to bottom, rgba(223, 61, 61, 0) 30%, rgba(47, 40, 40, 0.913) 100%),
+                url("transportation.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#nationalnews-background{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, #ffffff 100%), 
+                url("nationalnews.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-family: "Lobster";
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-size:4em;
+    text-shadow:0px 0px 10px white;
+}
+.news {
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.news-container{
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 40%, rgb(241, 234, 158) 100%); 
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 10px;
+}
+.news-block{
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 5%;
+    margin: 0px;
+    background: linear-gradient(to bottom, rgb(6, 45, 77) 10%, white 70%, rgb(173, 183, 239) 100%); 
+}
+.news-image {
+    width: auto;
+    overflow: hidden;
+    height: 200px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 10px;
+}
+.news-desc{
+    font-weight: bold;
+    font-size: 0.5em;
+    color: rgb(47, 56, 63);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 10px;
+    margin-bottom: 15px;
+}
+.news-desc:hover{
+    color: rgb(255, 15, 15);
+    cursor: pointer;
+}
+.news-desc:active{
+    color: rgb(103, 79, 79);
+}
+
+#weather-pic,
+#sport-pic{
+    padding: 30px;
+    display: flex;
+    height: 125px;
+}
+
+.weather-background{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, #ffffff 100%), 
+                url("weatherforecast2.jpg"); 
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-family: "Lobster";
+    font-weight: lighter;
+    letter-spacing: 5px;
+    font-size:xxx-large;
+    text-shadow:0px 0px 10px white;
+}
+.weather-container{
+    margin: 20px;
+    margin-bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 60vh;
+    font-family: "Tektur";
+    font-size: x-large;
+    color: rgb(67, 68, 68);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 30%, rgb(156, 202, 255)75%, rgb(120, 120, 219));
+    padding-bottom: 180px;
+}
+.weather-container p{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.weather-input-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 10px;
+    text-align: center;
+    width: 90%;
+}
+#cityInput{
+    width: 60%;
+    font-size: 2em;
+    padding: 10px;
+    margin-right: 20px;
+    background-color: rgb(231, 235, 250);
+    font-family: "Tektur";
+    border: none;
+    border-radius: 10px;
+}
+#cityInput:focus{
+    background-color: rgb(202, 207, 231);
+}
+.searchButton,
+.homeButton{
+    position: fixed;
+    margin-top: auto;
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 35px;
+    font-family: "Poetsen One";
+    padding: 5px 20px;
+    border-radius: 15px;
+    display:block;
+    margin: 15px;
+    text-decoration: none;
+    box-shadow: 5px 5px 5px rgb(100, 96, 96);
+    opacity: 0.8;
+    bottom: 0;
+    align-self: center;
+}
+.searchButton:hover,
+.homeButton:hover{
+    background-color: #deeae6;
+}
+.searchButton:hover a,
+.homeButton:hover a{
+    color: #362536;
+}
+.searchButton:active,
+.homeButton:active{
+    background-color: #ffffff;
+}
+#navigateButton{
+    width: 20% auto;
+    font-size: 1.5em;
+    padding: 15px 20px;
+    border-radius: 9%;
+    border: none;
+    background-color: #aff5b3;
+    font-family: "Poetsen One";
+    box-shadow: 5px 5px 5px gray;
+}
+#navigateButton:hover{
+    background-color: #a0dfa3;
+    color: rgb(255, 255, 255);
+}
+#navigateButton:active{
+    background-color: #859286;
+}
+#results{
+    font-size: 50px; 
+    color: red; 
+    text-align: center; 
+    margin-top: 45px;
+    font-family: "Tektur";
+    font-weight: bold;
+    width: 90%;
+}
+#weather-icon{
+    font-size: 100px;
+}
+.sport-background{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0)55%, rgb(46, 41, 117) 100%),
+                url("sportbackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-family: "Trade Winds";
+    font-weight: lighter;
+    letter-spacing: 5px;
+    font-size:3em;
+    color: rgb(255, 255, 255);
+    text-shadow:0px 0px 10px rgb(176, 177, 166);
+}
+.button-container{
+    background: linear-gradient(to bottom, rgb(46, 41, 117) 40%, rgb(86, 81, 164));
+    display: flex;
+    justify-content: space-around;
+}
+.myButton{
+    color: white;
+    font-size: 2em;
+    height: auto;
+    border: none;
+    font-family: "Poetsen One";
+    box-shadow: 5px 5px 5px black;
+    margin: 20px;
+    padding: 30px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+#malaysia-button{
+    background-color: #d11212dc; 
+}
+#world-button{
+    background-color: #694cfb; 
+}
+#malaysia-button:hover{
+    background-color: #912f2fdc; 
+    color: #868484;
+}
+#world-button:hover{
+    background-color: #574d87; 
+    color: #868484;
+}
+#malaysia-button:active{
+    background-color: #fc8b8bdc; 
+    color: #000000;
+}
+#world-button:active{
+    background-color: #c2b8f0; 
+    color: #000000;
+}
+#sports-news{
+    background: linear-gradient(to bottom, rgb(86, 81, 164) 40%, tomato);
+}
+#sports-news h1{
+    margin: 20px;
+    font-size: 3em;
+}
+#sports-news a{
+    color: rgb(0, 255, 255);
+}
+
+.link-box {
+    display: inline-block;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+  
+.link-box:hover {
+    text-decoration: underline;
+}
+  
+.link-image {
+    width: 200;
+    display: block;
+    margin: 0 auto;
+}
+  
+.link-text {
+    top: -110px;
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #d6e8f7;
+    font-size: 18px;
+}
+
+#promptMessage{
+    font-size: 100px;
+}
+
+.sideBar{
+    background-color: #86e3ce;
+    text-align: left;
+    font-size: 35px;
+    font-family: "Tektur";
+    margin-left: 20px;
+    margin-right: 1393px;
+    border-radius: 30px;
+    display:block;
+    text-decoration: none;
+}
+
+.healthcare-background{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0)30%, rgb(141, 230, 123) 100%),
+                url("healthcare.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-size:6em;
+    color: rgb(255, 255, 255);
+    text-shadow:0px 0px 10px rgb(63, 63, 57);
+    font-family: "Caveat";
+}
+
+.healthcare-container{
+    padding: 15px;
+    height: auto; 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: stretch;
+    border-bottom: 1px dotted rgb(97, 95, 95);
+}
+#portalKKM{
+    border-top: 1px dotted rgb(97, 95, 95);
+    background: linear-gradient(to bottom, rgb(141, 230, 123) 30%, rgb(122, 255, 182));
+}
+#mySejahtera{
+    background: linear-gradient(to bottom, rgb(122, 255, 182) 30%, rgb(122, 253, 255));
+}
+#nearbyHealthServices{
+    background: linear-gradient(to bottom, rgb(122, 253, 255) 30%, rgb(122, 195, 255));
+}
+.healthcare-button{
+    width: 30%;
+    background-color: #f5f9df;
+    border: 1px solid white;
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border-radius: 10%;
+    font-size: large;
+    box-shadow: 5px 5px 5px #362536;
+}
+.healthcare-button:hover{
+    background-color: #e6ebca;
+    cursor: pointer;
+}
+.healthcare-button:active{
+    background-color: #fdfff3;
+}
+.healthcare-desc{
+    width: 60%;
+    height: auto;
+    font-size: large;
+}
+.event-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    background: linear-gradient(to bottom, 
+            rgb(215, 129, 215) 20%, 
+            rgb(175, 129, 215) 40%,
+            rgb(162, 129, 215) 60%,
+            rgb(164, 144, 233) 100%);
+}
+.event-block{
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.361);
+}
+.event-block:last-child:nth-child(odd){
+    grid-column: 1/span 2;
+    justify-self: center;
+    width: 50%;
+}
+.event-desc{
+    font-family: "Tilt Neon";
+    margin: 20px;
+}
+.event-link-button {
+    background: #e0e0e0;
+    padding: 10px 20px;
+    text-align: center;
+    width: 90%;
+    margin: 10px;
+    margin-top: auto;
+    font-family: "Silkscreen";
+    font-size: x-large;
+}
+.event-link-button:hover{
+    background: #a5a5a5;
+    color: rgb(245, 240, 240);
+    cursor: pointer;
+}
+.event-link-button:active{
+    background: #474747;
+    color: rgb(245, 240, 240);
+}
+.event-logo{
+    text-align: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 95%;
+    height: 35vh;
+    margin: 10px;
+    background-position: center;
+    overflow: visible;
+}
+.event-background{
+    font-size: xxx-large; 
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0)55%, rgb(126, 29, 156) 100%), 
+                url('event-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30vh;
+    color: aliceblue; 
+    padding: 50px; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Silkscreen";
+    text-shadow: 0px 0px 15px rgb(255, 251, 0);
+}
+.event-subtitle{
+    font-family: "Silkscreen";
+    text-shadow: 0px 0px 15px rgb(255, 251, 0);
+    padding: 15px;
+    height: auto;
+    font-size: xx-large; 
+    background: linear-gradient(to bottom, rgb(126, 29, 156)30%, rgb(127, 60, 147)45%, rgb(153, 80, 153) 60%, rgb(215, 129, 215) 100%);
+}
+.event-subtitle p{
+    font-size: medium;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.607);
+    font-family: "Tilt Neon";
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.goverment-background{
+    font-size: xx-large;
+    color: black; 
+    background: linear-gradient(to bottom, rgba(246, 243, 150, 0.2) 50%, rgba(249, 243, 157, 0.99)100%),url('jalur-gemilang.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-shadow: 0px 0px 10px rgb(249, 249, 167);
+    font-weight: bolder;
+}
+#goverment-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background: linear-gradient(to bottom, rgba(249, 243, 157, 0.99) 20%,  rgba(194, 188, 108, 0.99) 40%, rgba(169, 163, 79, 0.99) 70%,rgb(152, 152, 77));
+}
+.goverment-block{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: column;
+    background: linear-gradient(to bottom, white 20%, rgba(197, 197, 81, 0.479));
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.68);
+}
+.goverment-desc{
+    margin: 10px;
+    width: 90%;
+    font-family: "Inika";
+}
+.goverment-button{
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin: 0;
+    margin-top: auto;
+    font-family: "Inika";
+    font-size: medium;
+    height: 15vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.685)100%),url("msia-logo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.578);
+}
+.goverment-button:hover{
+    background: linear-gradient(to bottom, rgba(157, 143, 143, 0.685)100%),url("msia-logo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+}
+.goverment-button:active{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6)100%),url("msia-logo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: rgba(0, 0, 0, 0.37);
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.Malacca-button{
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius:8px;
+}
+
+.Malacca{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.Malacca a{
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.Malacca a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .Malacca {
+    display: block;
+}
+
+.dropdown:hover .Malacca-button {
+    background-color: #2980b9;
+}
+
+.transportation-title{
+    height: 35vh;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 0px 0px 10px rgb(0, 21, 255);
+    font-family: "Anonymous Pro";
+    text-align: center;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(to bottom, rgba(136, 85, 247, 0)30%, rgb(136, 85, 247)100%),
+                url("transportation.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.transportation-title h1{
+    width: 100%;
+}
+
+.transportation-large-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(to bottom, rgb(136, 85, 247) 20%, rgb(85, 180, 247) 40%,rgb(85, 247, 247) 60%,rgb(85, 247, 185) 80%,rgb(58, 164, 118) 100%);
+    /* background-color: #00ffc3; */
+}
+
+.transportation-container {
+    width: 90%;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(85, 185, 252, 0);
+    box-shadow: 5px 5px 5px grey;
+    font-size: x-large;
+}
+
+.transport-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: rgb(117, 191, 240);
+    /* background-color: rgb(174, 199, 218); */
+    color: rgb(56, 56, 56);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: xx-large;
+}
+
+.Malaysia {
+    display: none;
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.Malaysia li {
+    padding: 10px 16px;
+    border-bottom: 1px solid #eee;
+    width: 200vh;
+    background-color: rgba(201, 238, 250, 0.621);
+    border: 1px solid rgba(210, 209, 209, 0.473);
+}
+
+.Malaysia li:last-child {
+    border-bottom: none;
+}
+
+.Malaysia li a {
+text-decoration: none;
+color: #333;
+}
+
+.Malaysia li:hover {
+background-color: #efefef;
+}
+
+.grab-logo{
+    height: 35vh;
+    width: 36vh;
+    font-size: xx-large; 
+    overflow: hidden;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 22%;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px gray;
+    
+}
+.grab-logo img{
+    width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 5px gray;
+}
+
+@media screen and (max-width: 750px) {
+    .healthcare-card,
+    .goverment-card,
+    .event-card,
+    .sport-card,
+    .weather-card,
+    .transport-card{
+        font-size: 0.3em;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #website-subtitle{
+        font-size: 1.5em;
+    }
+    .small-card-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 200vh;
+    }
+    .nationalnews-card{
+        min-height: 350px;
+        border: 2px solid rgba(255, 255, 255, 0.505);
+        width: 95%;
+        box-shadow: 5px 5px 5px white;
+        border-radius: 10px;
+    }
+    .healthcare-card,
+    .goverment-card,
+    .event-card,
+    .sport-card,
+    .weather-card,
+    .transport-card{
+        border: 2px solid rgba(255, 255, 255, 0.505);
+        width: 95%;
+        box-shadow: 5px 5px 5px white;
+        border-radius: 10px;
+        margin: 10px;
+        font-size: 0.5em;
+    }
+    #nationalnews-background{
+        font-size: 3em;
+    }
+    .news-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+    .weather-container{
+        font-size: larger;
+    }
+    .weather-background{
+        font-size: xx-large;
+    }
+    .sport-background{
+        font-size: 2.5em;
+    }
+    .myButton{
+        padding: 20px;
+        font-size: 1em;
+    }
+    .healthcare-background{
+        font-size: 4em;
+    }
+    .healthcare-button{
+        font-size: normal;
+    }
+    .event-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .event-block{
+        width: 100%;
+        height: auto;
+    }
+    .event-logo{
+        height: 30vh;
+    }
+    .event-block:last-child:nth-child(odd){
+        width: 100%;
+    }
+    .event-background{
+        height: 15vh;
+        font-size: xx-large;
+        overflow-y: hidden;
+    }
+    .event-link-button{
+        width: 90%;
+    }
+    .goverment-button{
+        height: 20vh;
+        font-size: small;
+    }
+    .goverment-background{
+        font-size: x-large;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #website-title{
+        font-size: 2em;
+    }
+    #website-subtitle{
+        font-size: 1em;
+    }
+    #website-desc{
+        font-size: smaller;
+    }
+    .card-container h1{
+        font-size: larger;
+    }
+    .small-card-container h1{
+        font-size: 1.5em;
+    }
+    #cityInput{
+        font-size: small;
+    }
+    #navigateButton{
+        font-size: small;
+        padding: 10px;
+    }
+    #results{
+        font-size: large;
+    }
+    .healthcare-background{
+        height: 30vh;
+        font-size: 2.5em;
+    }
+    .healthcare-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .healthcare-button{
+        width: 90%;
+    }
+    .healthcare-desc{
+        width: 90%;
+        margin: 10px;
+    }
+    .event-desc{
+        margin-top: -20px;
+    }
+    .event-link-button{
+        font-size: large;
+    }
+    .event-subtitle{
+        font-size: large;
+    }
+    .event-background{
+        height: 15vh;
+        overflow-y: hidden;
+        font-size: large;
+    }
+    #goverment-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .transportation-title{
+        font-size: large;
+    }
+    .goverment-background{
+        font-size: medium;
+    }
+    .button-container{
+        flex-direction: column;
+    }
+}

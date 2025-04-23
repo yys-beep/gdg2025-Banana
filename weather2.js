@@ -18,7 +18,7 @@ function myNavigateButton() {
                 const lng = location.lng;
 
                 // Call OpenWeatherMap API for weather data
-                fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${WEATHER_API_KEY}&units=metric`)
+                fetch(functionUrl)
                     .then(response => response.json())
                     .then(weatherData => {
                         console.log(weatherData.hourly);

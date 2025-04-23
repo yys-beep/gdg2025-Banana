@@ -1,4 +1,5 @@
-let country = ""; 
+//the country variable means reported by which country
+let country = ""; // Initialize country outside the functions
 
 function showMessageMalaysia(){
     country = "MY";
@@ -21,7 +22,7 @@ function fetchSportNews(){
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            if (data && Array.isArray(data.results)) { // Check if data.results exists and is an array
+            if (data && Array.isArray(data.results)) {
                 const articles = data.results;
                 let output = "<h1 style='color: white;'>Latest Sport News</h1>";
                 articles.forEach(article => {
@@ -30,7 +31,7 @@ function fetchSportNews(){
                         desc = article.description.slice(0, 350);
                         desc = desc.slice(0,desc.lastIndexOf(" ")+1) + '...';
                     } else {
-                        desc = "No description available."; // More user-friendly fallback
+                        desc = "No description available.";
                     }
                     output += `
                         <div style="margin-bottom: 20px; padding: 10px; border-bottom: 1px solid #ccc; color: white;">
@@ -56,3 +57,6 @@ function fetchSportNews(){
         });
 
 }
+
+// You might want to call one of these functions to load news on page load, for example:
+// showMessageMalaysia();

@@ -35,7 +35,7 @@ function success(position){
             <h3>Weather Information for ${cityName}</h3><br>
             <p>Temperature: ${temp}°C</p><br>
             <p>Feels like: ${feelsLike}°C</p><br>
-            <p>Humidity: ${humidity}</p><br>
+            <p>Humidity: ${humidity}%</p><br>
             <p>Condition: ${weather}</p><br>
             <p>Tip: ${tip}</p><br>
             <h1 id="weather-icon">${icon}</h1>

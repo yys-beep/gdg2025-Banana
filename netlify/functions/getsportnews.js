@@ -20,10 +20,18 @@ exports.handler = async (event, context) => {
     }
     const data = await response.json();
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify(data.results),
-    };
+    if (data && Array.isArray(data.results)) {
+      return {
+        statusCode: 200,
+        body: JSON.stringify(data.results),
+      };
+    } else {
+      console.error("Error: NewsData.io response did not contain a valid 'results' array:", data);
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: 'Failed to load sports news: Invalid response format' }),
+      };
+    }
   } catch (error) {
     console.error("Error fetching news:", error);
     return {

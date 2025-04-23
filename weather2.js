@@ -7,7 +7,7 @@ function myNavigateButton() {
         return;
     }
 
-    const functionUrl = `/.netlify/functions/getlocationweather?city=${encodeURIComponent(city)}`;
+    const functionUrl = `https://easeandaccess.netlify.app/.netlify/functions/getlocationweather?city=${encodeURIComponent(city)}`;
 
     fetch(functionUrl)
         .then(response => response.json())

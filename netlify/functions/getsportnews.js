@@ -11,7 +11,7 @@ exports.handler = async (event, context) => {
     };
   }
 
-  const url = `https://newsdata.io/api/1/news?apikey=<span class="math-inline">\{newsApiKey\}&category\=sports&country\=</span>{country}&language=en&size=10`;
+  const url = `https://newsdata.io/api/1/news?apikey=${newsApiKey}&category=sports&country=${country}&language=en&size=10`;
 
   try {
     const response = await fetch(url);

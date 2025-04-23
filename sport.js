@@ -14,7 +14,7 @@ document.getElementById("sports-news").style.height = "100vh";
 function fetchSportNews(){
     document.getElementById("sports-news").innerHTML = `<h1 style="color:rgb(253, 170, 170); font-family="Tektur">Loading...<\h1>`;
     document.getElementById("sports-news").style.height = "50vh";
-    const functionUrl = `/.netlify/functions/getsportsnews?country=${country}`;
+    const functionUrl = `https://easeandaccess.netlify.app/.netlify/functions/getsportnews?country=${country}`;
 
     fetch(functionUrl)
         .then(response => response.json())

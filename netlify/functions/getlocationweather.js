@@ -14,7 +14,7 @@ exports.handler = async (event, context) => {
 
   try {
     // Fetch location data from OpenCage
-    const locationUrl = `https://api.opencagedata.com/geocode/v1/json?q=<span class="math-inline">\{encodeURIComponent\(city\)\}&key\=</span>{locationApiKey}&language=en&pretty=1`;
+    const locationUrl = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(city)}&key=${locationApiKey}&language=en&pretty=1`;
     const locationResponse = await fetch(locationUrl);
     if (!locationResponse.ok) {
       throw new Error(`OpenCage API error! status: ${locationResponse.status}`);
@@ -31,7 +31,7 @@ exports.handler = async (event, context) => {
     const { lat, lng } = locationData.results[0].geometry;
 
     // Fetch weather data from OpenWeatherMap
-    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=<span class="math-inline">\{lat\}&lon\=</span>{lng}&appid=${weatherApiKey}&units=metric`;
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${weatherApiKey}&units=metric`;
     const weatherResponse = await fetch(weatherUrl);
     if (!weatherResponse.ok) {
       throw new Error(`OpenWeatherMap API error! status: ${weatherResponse.status}`);

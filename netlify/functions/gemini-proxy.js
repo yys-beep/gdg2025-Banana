@@ -1,5 +1,6 @@
 // netlify/functions/gemini-proxy.js
-const fetch = require('node-fetch'); // You might need to install this: npm install node-fetch
+
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
 exports.handler = async (event) => {
   try {
@@ -46,7 +47,11 @@ exports.handler = async (event) => {
       console.error('Google AI Studio API Error:', errorData);
       return {
         statusCode: response.status,
-        body: JSON.stringify({ error: `Google AI Studio API request failed: ${response.status} - ${errorData?.error?.message || 'Unknown error'}` }),
+        body: JSON.stringify({
+          error: `Google AI Studio API request failed: ${response.status} - ${
+            errorData?.error?.message || 'Unknown error'
+          }`,
+        }),
       };
     }
 
